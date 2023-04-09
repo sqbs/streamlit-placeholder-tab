@@ -8,7 +8,7 @@ def main():
         title = st.experimental_get_query_params().get("title", "")[0]
     except IndexError:
         title = placeholder
-    st.set_page_config(page_title=title, page_icon=":mag_right:")
+    st.set_page_config(page_title=title, page_icon=":file_folder:")
     st.title("{}{}".format(placeholder, ": {}".format(title if title else '') if title != placeholder else ''))
     tab_name = st.text_input("Enter a tab name", value=title if title != placeholder else '')
     if st.button("Submit"):
